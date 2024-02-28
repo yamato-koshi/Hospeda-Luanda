@@ -1,0 +1,124 @@
+/* Exemplo de media query para telas pequenas */
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para telas pequenas aqui */
+}
+
+/* Exemplo de media query para telas médias */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos específicos para telas médias aqui */
+}
+
+/* Exemplo de media query para telas grandes */
+@media only screen and (min-width: 1025px) {
+    /* Estilos específicos para telas grandes aqui */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner {
+    position: relative; /* Adiciona para permitir o posicionamento absoluto da sobreposição */
+    width: 100%;
+    height: 100vh;
+    background-image: url('pexels-emanuel-mateus-16149592.jpg'); /* Define a imagem de fundo */
+    background-size: cover;
+    background-position: center;
+}
+.overlay {
+    position: absolute; /* Permite que a sobreposição fique sobre a imagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Define uma cor de sobreposição semi-transparente */
+}
+.navbar {
+    position: absolute;
+    top: 20px; /* Ajuste a posição vertical conforme necessário */
+    left: 50%; /* Coloca a navbar no centro horizontal */
+    transform: translateX(-50%); /* Move a navbar para a esquerda pela metade da largura dela */
+    display: flex;
+    align-items: center;
+}
+.navbar .logo {
+    width: 200px; /* Ajuste o tamanho do logo conforme necessário */
+    margin-right: 20px; /* Espaçamento entre o logo e os itens da navbar */
+    cursor: pointer;
+    transition: opacity 1s;
+}
+.navbar .logo:hover{
+    opacity: 0.6;
+}
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 800px;
+}
+.navbar ul li {
+    margin-right: 40px; /* Espaçamento entre os itens da navbar */
+    font-weight: 600;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white; /* Cor do texto da navbar */
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #8ae2d9;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.content p a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+.content p a:hover{
+    opacity: 0.8;
+    color: wheat;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: 700;
+    border: 2px solid #8ae2d9;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+button:hover{
+    background-color: #8ae2d9;
+}
